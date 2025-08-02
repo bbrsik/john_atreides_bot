@@ -7,7 +7,6 @@ from config import (
 	logger,
 	bot,
 )
-
 from utility import parse_time_string
 
 
@@ -89,7 +88,7 @@ def setup():
             "username - Mentioned user, who you want to send a direct messege. \n"
         )
     )
-    # todo doesn't really work, figure out later
+
     async def dm(ctx, member: discord.Member = None):
         if member is None:
             await ctx.send("Who do you expect me to DM? Your mom? Tag someone right after the command!")
