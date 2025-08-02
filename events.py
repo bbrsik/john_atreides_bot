@@ -6,7 +6,7 @@ from config import (
 )
 
 
-def setup(bot):
+def setup():
 	@bot.event
 	async def on_ready():
 		guild_count = 0
@@ -23,7 +23,13 @@ def setup(bot):
 		if message.author == bot.user:
 			return
 
-		if 'atreides' in message.content.lower():
-			await message.channel.send("Atreides!")
+		message_content = message.content.lower()
+		answer_amount = 0
+
+		if 'atreides' in message_content:
+			while 'atreides' in message_content:
+				answer_amount += 1
+				message_content = message_content.replace('atreides', '', 1)
+			await message.channel.send("Atreides! " * answer_amount)
 
 		await bot.process_commands(message)

@@ -9,7 +9,7 @@ from config import (
 	logger
 )
 
-events.setup(bot)
-commands.setup(bot)
+events.setup()
+commands.setup()
 
 bot.run(DISCORD_TOKEN)

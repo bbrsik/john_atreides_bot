@@ -6,7 +6,7 @@ from config import (
 )
 
 
-def setup(bot):
+def setup():
     @bot.command()
     async def notify_me(ctx):
         try:
