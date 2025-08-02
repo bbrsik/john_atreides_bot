@@ -18,6 +18,6 @@ logger = logging.getLogger("bot")
 intents = discord.Intents.all()
 intents.message_content = True
 
-bot = commands.Bot(command_prefix='!', intents=intents)
+bot = commands.Bot(command_prefix='/d ', intents=intents)
 
 DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
