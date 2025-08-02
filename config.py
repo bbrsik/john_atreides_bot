@@ -9,12 +9,15 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(name)s - %(message)s'
+)
+logger = logging.getLogger("bot")
 
-intents = discord.Intents.default()
+intents = discord.Intents.all()
 intents.message_content = True
 
-bot = commands.Bot(command_prefix='!', intents=intents)
+bot = commands.Bot(command_prefix='/', intents=intents)
 
 DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')

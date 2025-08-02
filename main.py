@@ -2,6 +2,7 @@ import discord
 
 import events
 import commands
+import errors  # hehe
 
 from config import (
 	bot,
@@ -11,5 +12,6 @@ from config import (
 
 events.setup()
 commands.setup()
+errors.setup()
 
 bot.run(DISCORD_TOKEN)
