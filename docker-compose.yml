@@ -1,0 +1,9 @@
+services:
+  bot:
+    build: .
+    container_name: john-atreides-bot
+    env_file:
+      - .env
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
